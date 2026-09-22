@@ -1,0 +1,212 @@
+:root {
+    --bg-color: #1a1a1a;
+    --text-white: #ffffff;
+    --ucl-teal: #8cd3c1;
+    --rel-red: #d39f9f;
+    --row-dark-grey: #8c8c8c;
+    --row-light-grey: #d9d9d9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 3-Column Grid Container */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 420px 630px 450px;
+    width: 1500px;
+    background-color: #121212;
+}
+
+/* --- Left Column --- */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-right: 1px solid #333; 
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.welcome-section h1 { font-size: 3rem; font-weight: 900; }
+.welcome-divider { width: 150px; margin: 5px auto 20px; border: 1px solid var(--text-white); }
+.laliga-logo { width: 200px; margin-bottom: 20px; }
+.welcome-section h2 { font-size: 1.2rem; font-weight: 800; }
+
+.matches-section h2 { font-size: 1.8rem; margin-bottom: 15px; font-weight: 800; }
+.matches-feed { display: flex; flex-direction: column; gap: 4px; }
+
+.match-row {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    color: #000;
+    font-weight: 800;
+    font-size: 0.85rem;
+}
+.match-row:nth-child(odd) { background-color: var(--row-light-grey); }
+.match-row:nth-child(even) { background-color: var(--row-dark-grey); }
+
+
+/* --- Middle Column (Table) --- */
+.right-column {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 630px;
+}
+
+.table-header {
+    text-align: left;
+    margin-bottom: 15px;
+    padding-left: 45px;
+}
+.table-header h2 { font-size: 1.8rem; font-weight: 800; }
+.table-header p { font-size: 0.75rem; font-weight: 700; }
+
+.table-labels {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 45px;
+    padding-right: 110px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    color: #888;
+    margin-bottom: 6px;
+}
+.label-stats {
+    display: flex;
+    gap: 15px;
+}
+.label-stats span {
+    width: 35px;
+    text-align: center;
+}
+
+.table-wrapper {
+    display: flex;
+    position: relative;
+    flex-grow: 1;
+}
+
+.standings-table {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.table-row {
+    display: flex;
+    align-items: center;
+    height: 28px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+.table-row .pos {
+    width: 35px;
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-align: right;
+    margin-right: 10px;
+    color: var(--text-white);
+}
+
+.table-row .team-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    color: #000;
+    font-weight: 800;
+    font-size: 0.85rem;
+}
+
+.team-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.team-crest {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.team-name {
+    font-weight: 800;
+}
+
+.stats-group {
+    display: flex;
+    gap: 15px;
+}
+
+.stat-box {
+    width: 35px;
+    text-align: center;
+}
+
+.stat-box.pts {
+    font-weight: 900;
+}
+
+/* --- Right Column (Recent Results) --- */
+.recent-column {
+    padding: 40px 30px;
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+    border-left: 1px solid #333;
+}
+
+.recent-column .matches-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.table-row {
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+.table-row:hover {
+    background-color: #2a2a2a;
+}
+
+/* Color Coding */
+.table-row.ucl .team-info { background-color: var(--ucl-teal); }
+.table-row.mid:nth-child(odd) .team-info { background-color: var(--row-dark-grey); }
+.table-row.mid:nth-child(even) .team-info { background-color: var(--row-light-grey); }
+.table-row.rel .team-info { background-color: var(--rel-red); }
+
+/* --- Side Identifiers --- */
+.side-labels { position: relative; width: 100px; margin-left: 10px; }
+.ucl-label-container { position: absolute; top: 0; display: flex; align-items: center; }
+.ucl-bar { width: 4px; height: 118px; background-color: var(--ucl-teal); margin-right: 10px; }
+
+.relegation-label-container { position: absolute; bottom: 0; display: flex; align-items: center; }
+.rel-bar { width: 4px; height: 88px; background-color: var(--rel-red); margin-right: 10px; }
+
+.label-text { font-size: 0.7rem; font-weight: 800; line-height: 1.2; text-transform: uppercase; }

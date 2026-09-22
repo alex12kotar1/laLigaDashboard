@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Analytics | La Liga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="team.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="team-dashboard-container">
+        
+        <div class="team-top-nav">
+            <a href="index.html" class="back-link">&larr; BACK TO DASHBOARD</a>
+        </div>
+
+        <!-- Fixed Top Summary -->
+        <div class="top-summary-grid">
+            <div class="summary-panel left">
+                <img id="team-crest" class="team-badge-large" src="" alt="Crest">
+                <div class="team-title-group">
+                    <h1 id="team-title">Loading...</h1>
+                    <div class="standing-summary">
+                        <h3>Current Standing:</h3>
+                        <div id="team-rank" class="standing-rank">1st place</div>
+                        <span class="badge-qualifier">UCL QUALIFIER</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-panel right">
+                <h2 style="font-size: 1.4rem; font-weight: 900; margin-bottom: 10px;">NEXT MATCH:</h2>
+                <div id="next-match-info" style="font-size: 0.9rem; font-weight: 800; color: var(--text-muted); margin-bottom: 15px;">
+                    vs. REAL MADRID 10/10 3:00 EST
+                </div>
+                <h3 style="font-size: 0.85rem; font-weight: 900; color: var(--text-white); margin-bottom: 10px;">H2H LAST 5</h3>
+                <div id="h2h-feed" style="display: flex; flex-direction: column; gap: 6px;">
+                    <!-- Static or dynamic H2H rows -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Strip (Red Bar in Mockup) -->
+        <div class="tabs-navigation">
+            <button class="tab-button active" onclick="switchTab('recent-form')">Recent Form</button>
+            <button class="tab-button" onclick="switchTab('home-advantage')">Home Field Advantage</button>
+            <button class="tab-button" onclick="switchTab('goals-stats')">Goals Scored / Against</button>
+            <button class="tab-button" onclick="switchTab('possession')">Possession</button>
+            <button class="tab-button" onclick="switchTab('top-players')">Top Players</button>
+        </div>
+
+        <!-- Dynamic Panels -->
+        <div class="tab-content-area">
+            
+            <!-- Panel 1: Recent Form -->
+            <div id="panel-recent-form" class="tab-panel active">
+                <h2 class="panel-title">Recent Form</h2>
+                <div class="chart-wrapper">
+                    <canvas id="formChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Panel 2: Home Field Advantage -->
+            <div id="panel-home-advantage" class="tab-panel">
+                <h2 class="panel-title">Home Field Advantage</h2>
+                <div class="chart-wrapper">
+                    <canvas id="homeChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Panel 3: Goals Scored / Conceded -->
+            <div id="panel-goals-stats" class="tab-panel">
+                <h2 class="panel-title">Goals Scored vs Conceded Per Matchday</h2>
+                <div class="chart-wrapper">
+                    <canvas id="goalsChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Panel 4: Possession -->
+            <div id="panel-possession" class="tab-panel">
+                <h2 class="panel-title">Average Possession %</h2>
+                <div style="font-size: 1.2rem; font-weight: 800; color: var(--text-muted);">Analytics view coming soon...</div>
+            </div>
+
+            <!-- Panel 5: Top Players -->
+            <div id="panel-top-players" class="tab-panel">
+                <h2 class="panel-title">Top Players</h2>
+                <div style="font-size: 1.2rem; font-weight: 800; color: var(--text-muted);">Player stats view coming soon...</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="team.js"></script>
+</body>
+</html>

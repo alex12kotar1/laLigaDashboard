@@ -1,0 +1,2376 @@
+{
+  "263": {
+    "id": 263,
+    "name": "Deportivo Alavés",
+    "shortName": "Alavés",
+    "crest": "https://crests.football-data.org/263.png",
+    "played": 7,
+    "goalsScored": 11,
+    "goalsConceded": 6,
+    "cleanSheets": 3,
+    "homeWins": 3,
+    "homeGames": 4,
+    "awayWins": 0,
+    "awayGames": 3,
+    "lastFive": [
+      "W",
+      "W",
+      "L",
+      "L",
+      "D"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 1,
+        "scored": 3,
+        "conceded": 0
+      },
+      {
+        "matchday": 2,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 3,
+        "scored": 1,
+        "conceded": 0
+      },
+      {
+        "matchday": 4,
+        "scored": 5,
+        "conceded": 2
+      },
+      {
+        "matchday": 5,
+        "scored": 1,
+        "conceded": 2
+      },
+      {
+        "matchday": 6,
+        "scored": 0,
+        "conceded": 1
+      },
+      {
+        "matchday": 7,
+        "scored": 0,
+        "conceded": 0
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Getafe",
+        "opponentId": 82,
+        "gf": 3,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-08-15T17:30:00Z"
+      },
+      {
+        "opponent": "Rayo Vallecano",
+        "opponentId": 87,
+        "gf": 1,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-08-20T19:00:00Z"
+      },
+      {
+        "opponent": "Villarreal",
+        "opponentId": 94,
+        "gf": 1,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-08-28T19:30:00Z"
+      },
+      {
+        "opponent": "Osasuna",
+        "opponentId": 79,
+        "gf": 5,
+        "ga": 2,
+        "isHome": true,
+        "utcDate": "2026-09-06T16:30:00Z"
+      },
+      {
+        "opponent": "Santander",
+        "opponentId": 5335,
+        "gf": 1,
+        "ga": 2,
+        "isHome": false,
+        "utcDate": "2026-09-12T12:00:00Z"
+      },
+      {
+        "opponent": "Valencia",
+        "opponentId": 95,
+        "gf": 0,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-09-15T18:00:00Z"
+      },
+      {
+        "opponent": "Athletic",
+        "opponentId": 77,
+        "gf": 0,
+        "ga": 0,
+        "isHome": false,
+        "utcDate": "2026-09-19T14:15:00Z"
+      }
+    ],
+    "goalsPerGame": 1.57,
+    "concededPerGame": 0.86,
+    "cleanSheetRate": 0.43,
+    "homeAdvantageDifferential": 75
+  },
+  "77": {
+    "id": 77,
+    "name": "Athletic Club",
+    "shortName": "Athletic",
+    "crest": "https://crests.football-data.org/77.png",
+    "played": 6,
+    "goalsScored": 7,
+    "goalsConceded": 6,
+    "cleanSheets": 3,
+    "homeWins": 1,
+    "homeGames": 4,
+    "awayWins": 1,
+    "awayGames": 2,
+    "lastFive": [
+      "L",
+      "W",
+      "W",
+      "D",
+      "D"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 2,
+        "scored": 1,
+        "conceded": 3
+      },
+      {
+        "matchday": 1,
+        "scored": 0,
+        "conceded": 2
+      },
+      {
+        "matchday": 3,
+        "scored": 2,
+        "conceded": 0
+      },
+      {
+        "matchday": 4,
+        "scored": 3,
+        "conceded": 0
+      },
+      {
+        "matchday": 5,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 7,
+        "scored": 0,
+        "conceded": 0
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Sevilla FC",
+        "opponentId": 559,
+        "gf": 1,
+        "ga": 3,
+        "isHome": true,
+        "utcDate": "2026-08-22T15:00:00Z"
+      },
+      {
+        "opponent": "Barça",
+        "opponentId": 81,
+        "gf": 0,
+        "ga": 2,
+        "isHome": false,
+        "utcDate": "2026-08-27T19:00:00Z"
+      },
+      {
+        "opponent": "Celta",
+        "opponentId": 558,
+        "gf": 2,
+        "ga": 0,
+        "isHome": false,
+        "utcDate": "2026-08-30T19:30:00Z"
+      },
+      {
+        "opponent": "Atleti",
+        "opponentId": 78,
+        "gf": 3,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-09-05T14:15:00Z"
+      },
+      {
+        "opponent": "Elche",
+        "opponentId": 285,
+        "gf": 1,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-09-12T16:30:00Z"
+      },
+      {
+        "opponent": "Alavés",
+        "opponentId": 263,
+        "gf": 0,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-09-19T14:15:00Z"
+      }
+    ],
+    "goalsPerGame": 1.17,
+    "concededPerGame": 1.0,
+    "cleanSheetRate": 0.5,
+    "homeAdvantageDifferential": -25
+  },
+  "78": {
+    "id": 78,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Atleti",
+    "crest": "https://crests.football-data.org/78.png",
+    "played": 7,
+    "goalsScored": 16,
+    "goalsConceded": 7,
+    "cleanSheets": 3,
+    "homeWins": 3,
+    "homeGames": 4,
+    "awayWins": 2,
+    "awayGames": 3,
+    "lastFive": [
+      "W",
+      "L",
+      "W",
+      "W",
+      "W"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 1,
+        "scored": 2,
+        "conceded": 0
+      },
+      {
+        "matchday": 2,
+        "scored": 2,
+        "conceded": 2
+      },
+      {
+        "matchday": 3,
+        "scored": 3,
+        "conceded": 1
+      },
+      {
+        "matchday": 4,
+        "scored": 0,
+        "conceded": 3
+      },
+      {
+        "matchday": 5,
+        "scored": 3,
+        "conceded": 0
+      },
+      {
+        "matchday": 6,
+        "scored": 4,
+        "conceded": 0
+      },
+      {
+        "matchday": 7,
+        "scored": 2,
+        "conceded": 1
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Málaga",
+        "opponentId": 84,
+        "gf": 2,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-08-19T19:00:00Z"
+      },
+      {
+        "opponent": "Villarreal",
+        "opponentId": 94,
+        "gf": 2,
+        "ga": 2,
+        "isHome": true,
+        "utcDate": "2026-08-23T15:00:00Z"
+      },
+      {
+        "opponent": "Sevilla FC",
+        "opponentId": 559,
+        "gf": 3,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-08-29T19:30:00Z"
+      },
+      {
+        "opponent": "Athletic",
+        "opponentId": 77,
+        "gf": 0,
+        "ga": 3,
+        "isHome": false,
+        "utcDate": "2026-09-05T14:15:00Z"
+      },
+      {
+        "opponent": "Real Sociedad",
+        "opponentId": 92,
+        "gf": 3,
+        "ga": 0,
+        "isHome": false,
+        "utcDate": "2026-09-13T19:00:00Z"
+      },
+      {
+        "opponent": "Osasuna",
+        "opponentId": 79,
+        "gf": 4,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-09-16T17:00:00Z"
+      },
+      {
+        "opponent": "Real Madrid",
+        "opponentId": 86,
+        "gf": 2,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-09-20T14:15:00Z"
+      }
+    ],
+    "goalsPerGame": 2.29,
+    "concededPerGame": 1.0,
+    "cleanSheetRate": 0.43,
+    "homeAdvantageDifferential": 8
+  },
+  "558": {
+    "id": 558,
+    "name": "RC Celta de Vigo",
+    "shortName": "Celta",
+    "crest": "https://crests.football-data.org/558.png",
+    "played": 7,
+    "goalsScored": 8,
+    "goalsConceded": 6,
+    "cleanSheets": 3,
+    "homeWins": 1,
+    "homeGames": 4,
+    "awayWins": 0,
+    "awayGames": 3,
+    "lastFive": [
+      "L",
+      "D",
+      "D",
+      "D",
+      "W"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 2,
+        "scored": 0,
+        "conceded": 0
+      },
+      {
+        "matchday": 1,
+        "scored": 1,
+        "conceded": 2
+      },
+      {
+        "matchday": 3,
+        "scored": 0,
+        "conceded": 2
+      },
+      {
+        "matchday": 6,
+        "scored": 0,
+        "conceded": 0
+      },
+      {
+        "matchday": 4,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 5,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 7,
+        "scored": 5,
+        "conceded": 0
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Valencia",
+        "opponentId": 95,
+        "gf": 0,
+        "ga": 0,
+        "isHome": false,
+        "utcDate": "2026-08-22T17:30:00Z"
+      },
+      {
+        "opponent": "Osasuna",
+        "opponentId": 79,
+        "gf": 1,
+        "ga": 2,
+        "isHome": true,
+        "utcDate": "2026-08-27T18:30:00Z"
+      },
+      {
+        "opponent": "Athletic",
+        "opponentId": 77,
+        "gf": 0,
+        "ga": 2,
+        "isHome": true,
+        "utcDate": "2026-08-30T19:30:00Z"
+      },
+      {
+        "opponent": "Real Sociedad",
+        "opponentId": 92,
+        "gf": 0,
+        "ga": 0,
+        "isHome": false,
+        "utcDate": "2026-09-03T19:00:00Z"
+      },
+      {
+        "opponent": "Getafe",
+        "opponentId": 82,
+        "gf": 1,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-07T17:00:00Z"
+      },
+      {
+        "opponent": "Málaga",
+        "opponentId": 84,
+        "gf": 1,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-09-13T12:00:00Z"
+      },
+      {
+        "opponent": "Santander",
+        "opponentId": 5335,
+        "gf": 5,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-09-19T16:30:00Z"
+      }
+    ],
+    "goalsPerGame": 1.14,
+    "concededPerGame": 0.86,
+    "cleanSheetRate": 0.43,
+    "homeAdvantageDifferential": 25
+  },
+  "559": {
+    "id": 559,
+    "name": "Sevilla FC",
+    "shortName": "Sevilla FC",
+    "crest": "https://crests.football-data.org/559.png",
+    "played": 7,
+    "goalsScored": 10,
+    "goalsConceded": 9,
+    "cleanSheets": 2,
+    "homeWins": 2,
+    "homeGames": 4,
+    "awayWins": 2,
+    "awayGames": 3,
+    "lastFive": [
+      "L",
+      "D",
+      "W",
+      "W",
+      "L"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 1,
+        "scored": 2,
+        "conceded": 1
+      },
+      {
+        "matchday": 2,
+        "scored": 3,
+        "conceded": 1
+      },
+      {
+        "matchday": 3,
+        "scored": 1,
+        "conceded": 3
+      },
+      {
+        "matchday": 4,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 5,
+        "scored": 1,
+        "conceded": 0
+      },
+      {
+        "matchday": 6,
+        "scored": 1,
+        "conceded": 0
+      },
+      {
+        "matchday": 7,
+        "scored": 1,
+        "conceded": 3
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Rayo Vallecano",
+        "opponentId": 87,
+        "gf": 2,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-08-15T19:30:00Z"
+      },
+      {
+        "opponent": "Athletic",
+        "opponentId": 77,
+        "gf": 3,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-08-22T15:00:00Z"
+      },
+      {
+        "opponent": "Atleti",
+        "opponentId": 78,
+        "gf": 1,
+        "ga": 3,
+        "isHome": true,
+        "utcDate": "2026-08-29T19:30:00Z"
+      },
+      {
+        "opponent": "Espanyol",
+        "opponentId": 80,
+        "gf": 1,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-06T19:00:00Z"
+      },
+      {
+        "opponent": "Valencia",
+        "opponentId": 95,
+        "gf": 1,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-09-11T19:00:00Z"
+      },
+      {
+        "opponent": "Deportivo",
+        "opponentId": 560,
+        "gf": 1,
+        "ga": 0,
+        "isHome": false,
+        "utcDate": "2026-09-16T17:00:00Z"
+      },
+      {
+        "opponent": "Barça",
+        "opponentId": 81,
+        "gf": 1,
+        "ga": 3,
+        "isHome": true,
+        "utcDate": "2026-09-19T19:00:00Z"
+      }
+    ],
+    "goalsPerGame": 1.43,
+    "concededPerGame": 1.29,
+    "cleanSheetRate": 0.29,
+    "homeAdvantageDifferential": -17
+  },
+  "79": {
+    "id": 79,
+    "name": "CA Osasuna",
+    "shortName": "Osasuna",
+    "crest": "https://crests.football-data.org/79.png",
+    "played": 7,
+    "goalsScored": 6,
+    "goalsConceded": 13,
+    "cleanSheets": 2,
+    "homeWins": 1,
+    "homeGames": 4,
+    "awayWins": 1,
+    "awayGames": 3,
+    "lastFive": [
+      "W",
+      "L",
+      "L",
+      "L",
+      "D"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 2,
+        "scored": 0,
+        "conceded": 0
+      },
+      {
+        "matchday": 1,
+        "scored": 2,
+        "conceded": 1
+      },
+      {
+        "matchday": 3,
+        "scored": 1,
+        "conceded": 0
+      },
+      {
+        "matchday": 4,
+        "scored": 2,
+        "conceded": 5
+      },
+      {
+        "matchday": 5,
+        "scored": 0,
+        "conceded": 2
+      },
+      {
+        "matchday": 6,
+        "scored": 0,
+        "conceded": 4
+      },
+      {
+        "matchday": 7,
+        "scored": 1,
+        "conceded": 1
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Levante",
+        "opponentId": 88,
+        "gf": 0,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-08-24T17:30:00Z"
+      },
+      {
+        "opponent": "Celta",
+        "opponentId": 558,
+        "gf": 2,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-08-27T18:30:00Z"
+      },
+      {
+        "opponent": "Getafe",
+        "opponentId": 82,
+        "gf": 1,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-08-31T17:30:00Z"
+      },
+      {
+        "opponent": "Alavés",
+        "opponentId": 263,
+        "gf": 2,
+        "ga": 5,
+        "isHome": false,
+        "utcDate": "2026-09-06T16:30:00Z"
+      },
+      {
+        "opponent": "Espanyol",
+        "opponentId": 80,
+        "gf": 0,
+        "ga": 2,
+        "isHome": true,
+        "utcDate": "2026-09-12T14:15:00Z"
+      },
+      {
+        "opponent": "Atleti",
+        "opponentId": 78,
+        "gf": 0,
+        "ga": 4,
+        "isHome": false,
+        "utcDate": "2026-09-16T17:00:00Z"
+      },
+      {
+        "opponent": "Rayo Vallecano",
+        "opponentId": 87,
+        "gf": 1,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-09-19T12:00:00Z"
+      }
+    ],
+    "goalsPerGame": 0.86,
+    "concededPerGame": 1.86,
+    "cleanSheetRate": 0.29,
+    "homeAdvantageDifferential": -8
+  },
+  "80": {
+    "id": 80,
+    "name": "RCD Espanyol de Barcelona",
+    "shortName": "Espanyol",
+    "crest": "https://crests.football-data.org/80.png",
+    "played": 7,
+    "goalsScored": 10,
+    "goalsConceded": 10,
+    "cleanSheets": 2,
+    "homeWins": 1,
+    "homeGames": 4,
+    "awayWins": 1,
+    "awayGames": 3,
+    "lastFive": [
+      "L",
+      "D",
+      "W",
+      "L",
+      "L"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 1,
+        "scored": 3,
+        "conceded": 0
+      },
+      {
+        "matchday": 2,
+        "scored": 1,
+        "conceded": 2
+      },
+      {
+        "matchday": 3,
+        "scored": 1,
+        "conceded": 2
+      },
+      {
+        "matchday": 4,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 5,
+        "scored": 2,
+        "conceded": 0
+      },
+      {
+        "matchday": 6,
+        "scored": 1,
+        "conceded": 2
+      },
+      {
+        "matchday": 7,
+        "scored": 1,
+        "conceded": 3
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Levante",
+        "opponentId": 88,
+        "gf": 3,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-08-16T17:00:00Z"
+      },
+      {
+        "opponent": "Real Madrid",
+        "opponentId": 86,
+        "gf": 1,
+        "ga": 2,
+        "isHome": true,
+        "utcDate": "2026-08-22T19:30:00Z"
+      },
+      {
+        "opponent": "Real Sociedad",
+        "opponentId": 92,
+        "gf": 1,
+        "ga": 2,
+        "isHome": false,
+        "utcDate": "2026-08-29T17:00:00Z"
+      },
+      {
+        "opponent": "Sevilla FC",
+        "opponentId": 559,
+        "gf": 1,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-09-06T19:00:00Z"
+      },
+      {
+        "opponent": "Osasuna",
+        "opponentId": 79,
+        "gf": 2,
+        "ga": 0,
+        "isHome": false,
+        "utcDate": "2026-09-12T14:15:00Z"
+      },
+      {
+        "opponent": "Rayo Vallecano",
+        "opponentId": 87,
+        "gf": 1,
+        "ga": 2,
+        "isHome": false,
+        "utcDate": "2026-09-15T17:00:00Z"
+      },
+      {
+        "opponent": "Elche",
+        "opponentId": 285,
+        "gf": 1,
+        "ga": 3,
+        "isHome": true,
+        "utcDate": "2026-09-18T19:00:00Z"
+      }
+    ],
+    "goalsPerGame": 1.43,
+    "concededPerGame": 1.43,
+    "cleanSheetRate": 0.29,
+    "homeAdvantageDifferential": -8
+  },
+  "560": {
+    "id": 560,
+    "name": "RC Deportivo La Coruña",
+    "shortName": "Deportivo",
+    "crest": "https://crests.football-data.org/560.png",
+    "played": 7,
+    "goalsScored": 10,
+    "goalsConceded": 8,
+    "cleanSheets": 0,
+    "homeWins": 1,
+    "homeGames": 4,
+    "awayWins": 1,
+    "awayGames": 3,
+    "lastFive": [
+      "W",
+      "W",
+      "D",
+      "L",
+      "D"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 1,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 2,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 3,
+        "scored": 3,
+        "conceded": 1
+      },
+      {
+        "matchday": 4,
+        "scored": 3,
+        "conceded": 2
+      },
+      {
+        "matchday": 5,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 6,
+        "scored": 0,
+        "conceded": 1
+      },
+      {
+        "matchday": 7,
+        "scored": 1,
+        "conceded": 1
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Elche",
+        "opponentId": 285,
+        "gf": 1,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-08-17T19:00:00Z"
+      },
+      {
+        "opponent": "Málaga",
+        "opponentId": 84,
+        "gf": 1,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-08-24T19:30:00Z"
+      },
+      {
+        "opponent": "Valencia",
+        "opponentId": 95,
+        "gf": 3,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-08-30T17:30:00Z"
+      },
+      {
+        "opponent": "Villarreal",
+        "opponentId": 94,
+        "gf": 3,
+        "ga": 2,
+        "isHome": false,
+        "utcDate": "2026-09-05T19:00:00Z"
+      },
+      {
+        "opponent": "Getafe",
+        "opponentId": 82,
+        "gf": 1,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-13T16:30:00Z"
+      },
+      {
+        "opponent": "Sevilla FC",
+        "opponentId": 559,
+        "gf": 0,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-09-16T17:00:00Z"
+      },
+      {
+        "opponent": "Real Betis",
+        "opponentId": 90,
+        "gf": 1,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-09-20T16:30:00Z"
+      }
+    ],
+    "goalsPerGame": 1.43,
+    "concededPerGame": 1.14,
+    "cleanSheetRate": 0.0,
+    "homeAdvantageDifferential": -8
+  },
+  "81": {
+    "id": 81,
+    "name": "FC Barcelona",
+    "shortName": "Barça",
+    "crest": "https://crests.football-data.org/81.png",
+    "played": 7,
+    "goalsScored": 31,
+    "goalsConceded": 7,
+    "cleanSheets": 3,
+    "homeWins": 3,
+    "homeGames": 3,
+    "awayWins": 4,
+    "awayGames": 4,
+    "lastFive": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "W"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 2,
+        "scored": 5,
+        "conceded": 0
+      },
+      {
+        "matchday": 1,
+        "scored": 2,
+        "conceded": 0
+      },
+      {
+        "matchday": 3,
+        "scored": 5,
+        "conceded": 2
+      },
+      {
+        "matchday": 4,
+        "scored": 5,
+        "conceded": 0
+      },
+      {
+        "matchday": 5,
+        "scored": 4,
+        "conceded": 2
+      },
+      {
+        "matchday": 6,
+        "scored": 7,
+        "conceded": 2
+      },
+      {
+        "matchday": 7,
+        "scored": 3,
+        "conceded": 1
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Elche",
+        "opponentId": 285,
+        "gf": 5,
+        "ga": 0,
+        "isHome": false,
+        "utcDate": "2026-08-23T19:30:00Z"
+      },
+      {
+        "opponent": "Athletic",
+        "opponentId": 77,
+        "gf": 2,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-08-27T19:00:00Z"
+      },
+      {
+        "opponent": "Rayo Vallecano",
+        "opponentId": 87,
+        "gf": 5,
+        "ga": 2,
+        "isHome": true,
+        "utcDate": "2026-08-31T19:30:00Z"
+      },
+      {
+        "opponent": "Valencia",
+        "opponentId": 95,
+        "gf": 5,
+        "ga": 0,
+        "isHome": false,
+        "utcDate": "2026-09-06T14:15:00Z"
+      },
+      {
+        "opponent": "Levante",
+        "opponentId": 88,
+        "gf": 4,
+        "ga": 2,
+        "isHome": false,
+        "utcDate": "2026-09-13T14:15:00Z"
+      },
+      {
+        "opponent": "Santander",
+        "opponentId": 5335,
+        "gf": 7,
+        "ga": 2,
+        "isHome": true,
+        "utcDate": "2026-09-16T19:30:00Z"
+      },
+      {
+        "opponent": "Sevilla FC",
+        "opponentId": 559,
+        "gf": 3,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-19T19:00:00Z"
+      }
+    ],
+    "goalsPerGame": 4.43,
+    "concededPerGame": 1.0,
+    "cleanSheetRate": 0.43,
+    "homeAdvantageDifferential": 0
+  },
+  "82": {
+    "id": 82,
+    "name": "Getafe CF",
+    "shortName": "Getafe",
+    "crest": "https://crests.football-data.org/82.png",
+    "played": 7,
+    "goalsScored": 4,
+    "goalsConceded": 7,
+    "cleanSheets": 2,
+    "homeWins": 2,
+    "homeGames": 4,
+    "awayWins": 0,
+    "awayGames": 3,
+    "lastFive": [
+      "L",
+      "D",
+      "D",
+      "L",
+      "W"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 1,
+        "scored": 0,
+        "conceded": 3
+      },
+      {
+        "matchday": 2,
+        "scored": 1,
+        "conceded": 0
+      },
+      {
+        "matchday": 3,
+        "scored": 0,
+        "conceded": 1
+      },
+      {
+        "matchday": 4,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 5,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 6,
+        "scored": 0,
+        "conceded": 1
+      },
+      {
+        "matchday": 7,
+        "scored": 1,
+        "conceded": 0
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Alavés",
+        "opponentId": 263,
+        "gf": 0,
+        "ga": 3,
+        "isHome": false,
+        "utcDate": "2026-08-15T17:30:00Z"
+      },
+      {
+        "opponent": "Santander",
+        "opponentId": 5335,
+        "gf": 1,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-08-23T17:30:00Z"
+      },
+      {
+        "opponent": "Osasuna",
+        "opponentId": 79,
+        "gf": 0,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-08-31T17:30:00Z"
+      },
+      {
+        "opponent": "Celta",
+        "opponentId": 558,
+        "gf": 1,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-09-07T17:00:00Z"
+      },
+      {
+        "opponent": "Deportivo",
+        "opponentId": 560,
+        "gf": 1,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-09-13T16:30:00Z"
+      },
+      {
+        "opponent": "Real Betis",
+        "opponentId": 90,
+        "gf": 0,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-17T17:00:00Z"
+      },
+      {
+        "opponent": "Málaga",
+        "opponentId": 84,
+        "gf": 1,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-09-20T12:00:00Z"
+      }
+    ],
+    "goalsPerGame": 0.57,
+    "concededPerGame": 1.0,
+    "cleanSheetRate": 0.29,
+    "homeAdvantageDifferential": 50
+  },
+  "84": {
+    "id": 84,
+    "name": "Málaga CF",
+    "shortName": "Málaga",
+    "crest": "https://crests.football-data.org/84.png",
+    "played": 7,
+    "goalsScored": 3,
+    "goalsConceded": 12,
+    "cleanSheets": 1,
+    "homeWins": 0,
+    "homeGames": 3,
+    "awayWins": 0,
+    "awayGames": 4,
+    "lastFive": [
+      "L",
+      "D",
+      "D",
+      "L",
+      "L"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 1,
+        "scored": 0,
+        "conceded": 2
+      },
+      {
+        "matchday": 2,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 3,
+        "scored": 0,
+        "conceded": 4
+      },
+      {
+        "matchday": 4,
+        "scored": 0,
+        "conceded": 0
+      },
+      {
+        "matchday": 5,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 6,
+        "scored": 1,
+        "conceded": 3
+      },
+      {
+        "matchday": 7,
+        "scored": 0,
+        "conceded": 1
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Atleti",
+        "opponentId": 78,
+        "gf": 0,
+        "ga": 2,
+        "isHome": false,
+        "utcDate": "2026-08-19T19:00:00Z"
+      },
+      {
+        "opponent": "Deportivo",
+        "opponentId": 560,
+        "gf": 1,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-08-24T19:30:00Z"
+      },
+      {
+        "opponent": "Real Madrid",
+        "opponentId": 86,
+        "gf": 0,
+        "ga": 4,
+        "isHome": false,
+        "utcDate": "2026-08-30T15:00:00Z"
+      },
+      {
+        "opponent": "Levante",
+        "opponentId": 88,
+        "gf": 0,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-09-06T16:30:00Z"
+      },
+      {
+        "opponent": "Celta",
+        "opponentId": 558,
+        "gf": 1,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-13T12:00:00Z"
+      },
+      {
+        "opponent": "Villarreal",
+        "opponentId": 94,
+        "gf": 1,
+        "ga": 3,
+        "isHome": true,
+        "utcDate": "2026-09-17T19:30:00Z"
+      },
+      {
+        "opponent": "Getafe",
+        "opponentId": 82,
+        "gf": 0,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-20T12:00:00Z"
+      }
+    ],
+    "goalsPerGame": 0.43,
+    "concededPerGame": 1.71,
+    "cleanSheetRate": 0.14,
+    "homeAdvantageDifferential": 0
+  },
+  "86": {
+    "id": 86,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid",
+    "crest": "https://crests.football-data.org/86.png",
+    "played": 7,
+    "goalsScored": 18,
+    "goalsConceded": 8,
+    "cleanSheets": 1,
+    "homeWins": 3,
+    "homeGames": 3,
+    "awayWins": 2,
+    "awayGames": 4,
+    "lastFive": [
+      "W",
+      "L",
+      "W",
+      "W",
+      "L"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 2,
+        "scored": 2,
+        "conceded": 1
+      },
+      {
+        "matchday": 1,
+        "scored": 4,
+        "conceded": 1
+      },
+      {
+        "matchday": 3,
+        "scored": 4,
+        "conceded": 0
+      },
+      {
+        "matchday": 4,
+        "scored": 0,
+        "conceded": 1
+      },
+      {
+        "matchday": 5,
+        "scored": 4,
+        "conceded": 1
+      },
+      {
+        "matchday": 6,
+        "scored": 3,
+        "conceded": 2
+      },
+      {
+        "matchday": 7,
+        "scored": 1,
+        "conceded": 2
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Espanyol",
+        "opponentId": 80,
+        "gf": 2,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-08-22T19:30:00Z"
+      },
+      {
+        "opponent": "Real Sociedad",
+        "opponentId": 92,
+        "gf": 4,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-08-26T19:00:00Z"
+      },
+      {
+        "opponent": "Málaga",
+        "opponentId": 84,
+        "gf": 4,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-08-30T15:00:00Z"
+      },
+      {
+        "opponent": "Real Betis",
+        "opponentId": 90,
+        "gf": 0,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-04T19:00:00Z"
+      },
+      {
+        "opponent": "Rayo Vallecano",
+        "opponentId": 87,
+        "gf": 4,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-09-12T19:00:00Z"
+      },
+      {
+        "opponent": "Elche",
+        "opponentId": 285,
+        "gf": 3,
+        "ga": 2,
+        "isHome": false,
+        "utcDate": "2026-09-15T19:30:00Z"
+      },
+      {
+        "opponent": "Atleti",
+        "opponentId": 78,
+        "gf": 1,
+        "ga": 2,
+        "isHome": false,
+        "utcDate": "2026-09-20T14:15:00Z"
+      }
+    ],
+    "goalsPerGame": 2.57,
+    "concededPerGame": 1.14,
+    "cleanSheetRate": 0.14,
+    "homeAdvantageDifferential": 50
+  },
+  "87": {
+    "id": 87,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano",
+    "crest": "https://crests.football-data.org/87.png",
+    "played": 7,
+    "goalsScored": 11,
+    "goalsConceded": 16,
+    "cleanSheets": 0,
+    "homeWins": 2,
+    "homeGames": 3,
+    "awayWins": 0,
+    "awayGames": 4,
+    "lastFive": [
+      "L",
+      "W",
+      "L",
+      "W",
+      "D"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 1,
+        "scored": 1,
+        "conceded": 2
+      },
+      {
+        "matchday": 2,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 3,
+        "scored": 2,
+        "conceded": 5
+      },
+      {
+        "matchday": 4,
+        "scored": 3,
+        "conceded": 2
+      },
+      {
+        "matchday": 5,
+        "scored": 1,
+        "conceded": 4
+      },
+      {
+        "matchday": 6,
+        "scored": 2,
+        "conceded": 1
+      },
+      {
+        "matchday": 7,
+        "scored": 1,
+        "conceded": 1
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Sevilla FC",
+        "opponentId": 559,
+        "gf": 1,
+        "ga": 2,
+        "isHome": false,
+        "utcDate": "2026-08-15T19:30:00Z"
+      },
+      {
+        "opponent": "Alavés",
+        "opponentId": 263,
+        "gf": 1,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-08-20T19:00:00Z"
+      },
+      {
+        "opponent": "Barça",
+        "opponentId": 81,
+        "gf": 2,
+        "ga": 5,
+        "isHome": false,
+        "utcDate": "2026-08-31T19:30:00Z"
+      },
+      {
+        "opponent": "Santander",
+        "opponentId": 5335,
+        "gf": 3,
+        "ga": 2,
+        "isHome": true,
+        "utcDate": "2026-09-05T16:30:00Z"
+      },
+      {
+        "opponent": "Real Madrid",
+        "opponentId": 86,
+        "gf": 1,
+        "ga": 4,
+        "isHome": false,
+        "utcDate": "2026-09-12T19:00:00Z"
+      },
+      {
+        "opponent": "Espanyol",
+        "opponentId": 80,
+        "gf": 2,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-09-15T17:00:00Z"
+      },
+      {
+        "opponent": "Osasuna",
+        "opponentId": 79,
+        "gf": 1,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-19T12:00:00Z"
+      }
+    ],
+    "goalsPerGame": 1.57,
+    "concededPerGame": 2.29,
+    "cleanSheetRate": 0.0,
+    "homeAdvantageDifferential": 67
+  },
+  "5335": {
+    "id": 5335,
+    "name": "Real Racing Club de Santander",
+    "shortName": "Santander",
+    "crest": "https://crests.football-data.org/5335.png",
+    "played": 7,
+    "goalsScored": 11,
+    "goalsConceded": 21,
+    "cleanSheets": 0,
+    "homeWins": 2,
+    "homeGames": 3,
+    "awayWins": 0,
+    "awayGames": 4,
+    "lastFive": [
+      "W",
+      "L",
+      "W",
+      "L",
+      "L"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 1,
+        "scored": 2,
+        "conceded": 2
+      },
+      {
+        "matchday": 2,
+        "scored": 0,
+        "conceded": 1
+      },
+      {
+        "matchday": 3,
+        "scored": 3,
+        "conceded": 2
+      },
+      {
+        "matchday": 4,
+        "scored": 2,
+        "conceded": 3
+      },
+      {
+        "matchday": 5,
+        "scored": 2,
+        "conceded": 1
+      },
+      {
+        "matchday": 6,
+        "scored": 2,
+        "conceded": 7
+      },
+      {
+        "matchday": 7,
+        "scored": 0,
+        "conceded": 5
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Villarreal",
+        "opponentId": 94,
+        "gf": 2,
+        "ga": 2,
+        "isHome": true,
+        "utcDate": "2026-08-16T15:00:00Z"
+      },
+      {
+        "opponent": "Getafe",
+        "opponentId": 82,
+        "gf": 0,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-08-23T17:30:00Z"
+      },
+      {
+        "opponent": "Elche",
+        "opponentId": 285,
+        "gf": 3,
+        "ga": 2,
+        "isHome": true,
+        "utcDate": "2026-08-28T17:00:00Z"
+      },
+      {
+        "opponent": "Rayo Vallecano",
+        "opponentId": 87,
+        "gf": 2,
+        "ga": 3,
+        "isHome": false,
+        "utcDate": "2026-09-05T16:30:00Z"
+      },
+      {
+        "opponent": "Alavés",
+        "opponentId": 263,
+        "gf": 2,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-09-12T12:00:00Z"
+      },
+      {
+        "opponent": "Barça",
+        "opponentId": 81,
+        "gf": 2,
+        "ga": 7,
+        "isHome": false,
+        "utcDate": "2026-09-16T19:30:00Z"
+      },
+      {
+        "opponent": "Celta",
+        "opponentId": 558,
+        "gf": 0,
+        "ga": 5,
+        "isHome": false,
+        "utcDate": "2026-09-19T16:30:00Z"
+      }
+    ],
+    "goalsPerGame": 1.57,
+    "concededPerGame": 3.0,
+    "cleanSheetRate": 0.0,
+    "homeAdvantageDifferential": 67
+  },
+  "88": {
+    "id": 88,
+    "name": "Levante UD",
+    "shortName": "Levante",
+    "crest": "https://crests.football-data.org/88.png",
+    "played": 6,
+    "goalsScored": 8,
+    "goalsConceded": 12,
+    "cleanSheets": 2,
+    "homeWins": 1,
+    "homeGames": 2,
+    "awayWins": 0,
+    "awayGames": 4,
+    "lastFive": [
+      "D",
+      "W",
+      "D",
+      "L",
+      "L"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 1,
+        "scored": 0,
+        "conceded": 3
+      },
+      {
+        "matchday": 2,
+        "scored": 0,
+        "conceded": 0
+      },
+      {
+        "matchday": 3,
+        "scored": 5,
+        "conceded": 2
+      },
+      {
+        "matchday": 4,
+        "scored": 0,
+        "conceded": 0
+      },
+      {
+        "matchday": 5,
+        "scored": 2,
+        "conceded": 4
+      },
+      {
+        "matchday": 7,
+        "scored": 1,
+        "conceded": 3
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Espanyol",
+        "opponentId": 80,
+        "gf": 0,
+        "ga": 3,
+        "isHome": false,
+        "utcDate": "2026-08-16T17:00:00Z"
+      },
+      {
+        "opponent": "Osasuna",
+        "opponentId": 79,
+        "gf": 0,
+        "ga": 0,
+        "isHome": false,
+        "utcDate": "2026-08-24T17:30:00Z"
+      },
+      {
+        "opponent": "Real Betis",
+        "opponentId": 90,
+        "gf": 5,
+        "ga": 2,
+        "isHome": true,
+        "utcDate": "2026-08-29T15:00:00Z"
+      },
+      {
+        "opponent": "Málaga",
+        "opponentId": 84,
+        "gf": 0,
+        "ga": 0,
+        "isHome": false,
+        "utcDate": "2026-09-06T16:30:00Z"
+      },
+      {
+        "opponent": "Barça",
+        "opponentId": 81,
+        "gf": 2,
+        "ga": 4,
+        "isHome": true,
+        "utcDate": "2026-09-13T14:15:00Z"
+      },
+      {
+        "opponent": "Villarreal",
+        "opponentId": 94,
+        "gf": 1,
+        "ga": 3,
+        "isHome": false,
+        "utcDate": "2026-09-20T16:30:00Z"
+      }
+    ],
+    "goalsPerGame": 1.33,
+    "concededPerGame": 2.0,
+    "cleanSheetRate": 0.33,
+    "homeAdvantageDifferential": 50
+  },
+  "90": {
+    "id": 90,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis",
+    "crest": "https://crests.football-data.org/90.png",
+    "played": 7,
+    "goalsScored": 9,
+    "goalsConceded": 7,
+    "cleanSheets": 4,
+    "homeWins": 3,
+    "homeGames": 3,
+    "awayWins": 2,
+    "awayGames": 4,
+    "lastFive": [
+      "L",
+      "W",
+      "W",
+      "W",
+      "D"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 2,
+        "scored": 1,
+        "conceded": 0
+      },
+      {
+        "matchday": 1,
+        "scored": 1,
+        "conceded": 0
+      },
+      {
+        "matchday": 3,
+        "scored": 2,
+        "conceded": 5
+      },
+      {
+        "matchday": 4,
+        "scored": 1,
+        "conceded": 0
+      },
+      {
+        "matchday": 5,
+        "scored": 2,
+        "conceded": 1
+      },
+      {
+        "matchday": 6,
+        "scored": 1,
+        "conceded": 0
+      },
+      {
+        "matchday": 7,
+        "scored": 1,
+        "conceded": 1
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Real Sociedad",
+        "opponentId": 92,
+        "gf": 1,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-08-21T19:00:00Z"
+      },
+      {
+        "opponent": "Valencia",
+        "opponentId": 95,
+        "gf": 1,
+        "ga": 0,
+        "isHome": false,
+        "utcDate": "2026-08-25T19:00:00Z"
+      },
+      {
+        "opponent": "Levante",
+        "opponentId": 88,
+        "gf": 2,
+        "ga": 5,
+        "isHome": false,
+        "utcDate": "2026-08-29T15:00:00Z"
+      },
+      {
+        "opponent": "Real Madrid",
+        "opponentId": 86,
+        "gf": 1,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-09-04T19:00:00Z"
+      },
+      {
+        "opponent": "Villarreal",
+        "opponentId": 94,
+        "gf": 2,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-14T19:00:00Z"
+      },
+      {
+        "opponent": "Getafe",
+        "opponentId": 82,
+        "gf": 1,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-09-17T17:00:00Z"
+      },
+      {
+        "opponent": "Deportivo",
+        "opponentId": 560,
+        "gf": 1,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-20T16:30:00Z"
+      }
+    ],
+    "goalsPerGame": 1.29,
+    "concededPerGame": 1.0,
+    "cleanSheetRate": 0.57,
+    "homeAdvantageDifferential": 50
+  },
+  "92": {
+    "id": 92,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad",
+    "crest": "https://crests.football-data.org/92.png",
+    "played": 7,
+    "goalsScored": 9,
+    "goalsConceded": 13,
+    "cleanSheets": 1,
+    "homeWins": 1,
+    "homeGames": 3,
+    "awayWins": 2,
+    "awayGames": 4,
+    "lastFive": [
+      "W",
+      "D",
+      "W",
+      "L",
+      "W"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 2,
+        "scored": 0,
+        "conceded": 1
+      },
+      {
+        "matchday": 1,
+        "scored": 1,
+        "conceded": 4
+      },
+      {
+        "matchday": 3,
+        "scored": 2,
+        "conceded": 1
+      },
+      {
+        "matchday": 6,
+        "scored": 0,
+        "conceded": 0
+      },
+      {
+        "matchday": 4,
+        "scored": 3,
+        "conceded": 2
+      },
+      {
+        "matchday": 5,
+        "scored": 0,
+        "conceded": 3
+      },
+      {
+        "matchday": 7,
+        "scored": 3,
+        "conceded": 2
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Real Betis",
+        "opponentId": 90,
+        "gf": 0,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-08-21T19:00:00Z"
+      },
+      {
+        "opponent": "Real Madrid",
+        "opponentId": 86,
+        "gf": 1,
+        "ga": 4,
+        "isHome": false,
+        "utcDate": "2026-08-26T19:00:00Z"
+      },
+      {
+        "opponent": "Espanyol",
+        "opponentId": 80,
+        "gf": 2,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-08-29T17:00:00Z"
+      },
+      {
+        "opponent": "Celta",
+        "opponentId": 558,
+        "gf": 0,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-09-03T19:00:00Z"
+      },
+      {
+        "opponent": "Elche",
+        "opponentId": 285,
+        "gf": 3,
+        "ga": 2,
+        "isHome": false,
+        "utcDate": "2026-09-07T19:30:00Z"
+      },
+      {
+        "opponent": "Atleti",
+        "opponentId": 78,
+        "gf": 0,
+        "ga": 3,
+        "isHome": true,
+        "utcDate": "2026-09-13T19:00:00Z"
+      },
+      {
+        "opponent": "Valencia",
+        "opponentId": 95,
+        "gf": 3,
+        "ga": 2,
+        "isHome": false,
+        "utcDate": "2026-09-20T19:00:00Z"
+      }
+    ],
+    "goalsPerGame": 1.29,
+    "concededPerGame": 1.86,
+    "cleanSheetRate": 0.14,
+    "homeAdvantageDifferential": -17
+  },
+  "285": {
+    "id": 285,
+    "name": "Elche CF",
+    "shortName": "Elche",
+    "crest": "https://crests.football-data.org/285.png",
+    "played": 7,
+    "goalsScored": 11,
+    "goalsConceded": 17,
+    "cleanSheets": 0,
+    "homeWins": 0,
+    "homeGames": 3,
+    "awayWins": 1,
+    "awayGames": 4,
+    "lastFive": [
+      "L",
+      "L",
+      "D",
+      "L",
+      "W"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 1,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 2,
+        "scored": 0,
+        "conceded": 5
+      },
+      {
+        "matchday": 3,
+        "scored": 2,
+        "conceded": 3
+      },
+      {
+        "matchday": 4,
+        "scored": 2,
+        "conceded": 3
+      },
+      {
+        "matchday": 5,
+        "scored": 1,
+        "conceded": 1
+      },
+      {
+        "matchday": 6,
+        "scored": 2,
+        "conceded": 3
+      },
+      {
+        "matchday": 7,
+        "scored": 3,
+        "conceded": 1
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Deportivo",
+        "opponentId": 560,
+        "gf": 1,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-08-17T19:00:00Z"
+      },
+      {
+        "opponent": "Barça",
+        "opponentId": 81,
+        "gf": 0,
+        "ga": 5,
+        "isHome": true,
+        "utcDate": "2026-08-23T19:30:00Z"
+      },
+      {
+        "opponent": "Santander",
+        "opponentId": 5335,
+        "gf": 2,
+        "ga": 3,
+        "isHome": false,
+        "utcDate": "2026-08-28T17:00:00Z"
+      },
+      {
+        "opponent": "Real Sociedad",
+        "opponentId": 92,
+        "gf": 2,
+        "ga": 3,
+        "isHome": true,
+        "utcDate": "2026-09-07T19:30:00Z"
+      },
+      {
+        "opponent": "Athletic",
+        "opponentId": 77,
+        "gf": 1,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-12T16:30:00Z"
+      },
+      {
+        "opponent": "Real Madrid",
+        "opponentId": 86,
+        "gf": 2,
+        "ga": 3,
+        "isHome": true,
+        "utcDate": "2026-09-15T19:30:00Z"
+      },
+      {
+        "opponent": "Espanyol",
+        "opponentId": 80,
+        "gf": 3,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-18T19:00:00Z"
+      }
+    ],
+    "goalsPerGame": 1.57,
+    "concededPerGame": 2.43,
+    "cleanSheetRate": 0.0,
+    "homeAdvantageDifferential": -25
+  },
+  "94": {
+    "id": 94,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal",
+    "crest": "https://crests.football-data.org/94.png",
+    "played": 7,
+    "goalsScored": 13,
+    "goalsConceded": 12,
+    "cleanSheets": 0,
+    "homeWins": 1,
+    "homeGames": 3,
+    "awayWins": 1,
+    "awayGames": 4,
+    "lastFive": [
+      "L",
+      "L",
+      "L",
+      "W",
+      "W"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 1,
+        "scored": 2,
+        "conceded": 2
+      },
+      {
+        "matchday": 2,
+        "scored": 2,
+        "conceded": 2
+      },
+      {
+        "matchday": 3,
+        "scored": 0,
+        "conceded": 1
+      },
+      {
+        "matchday": 4,
+        "scored": 2,
+        "conceded": 3
+      },
+      {
+        "matchday": 5,
+        "scored": 1,
+        "conceded": 2
+      },
+      {
+        "matchday": 6,
+        "scored": 3,
+        "conceded": 1
+      },
+      {
+        "matchday": 7,
+        "scored": 3,
+        "conceded": 1
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Santander",
+        "opponentId": 5335,
+        "gf": 2,
+        "ga": 2,
+        "isHome": false,
+        "utcDate": "2026-08-16T15:00:00Z"
+      },
+      {
+        "opponent": "Atleti",
+        "opponentId": 78,
+        "gf": 2,
+        "ga": 2,
+        "isHome": false,
+        "utcDate": "2026-08-23T15:00:00Z"
+      },
+      {
+        "opponent": "Alavés",
+        "opponentId": 263,
+        "gf": 0,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-08-28T19:30:00Z"
+      },
+      {
+        "opponent": "Deportivo",
+        "opponentId": 560,
+        "gf": 2,
+        "ga": 3,
+        "isHome": true,
+        "utcDate": "2026-09-05T19:00:00Z"
+      },
+      {
+        "opponent": "Real Betis",
+        "opponentId": 90,
+        "gf": 1,
+        "ga": 2,
+        "isHome": true,
+        "utcDate": "2026-09-14T19:00:00Z"
+      },
+      {
+        "opponent": "Málaga",
+        "opponentId": 84,
+        "gf": 3,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-17T19:30:00Z"
+      },
+      {
+        "opponent": "Levante",
+        "opponentId": 88,
+        "gf": 3,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-09-20T16:30:00Z"
+      }
+    ],
+    "goalsPerGame": 1.86,
+    "concededPerGame": 1.71,
+    "cleanSheetRate": 0.0,
+    "homeAdvantageDifferential": 8
+  },
+  "95": {
+    "id": 95,
+    "name": "Valencia CF",
+    "shortName": "Valencia",
+    "crest": "https://crests.football-data.org/95.png",
+    "played": 7,
+    "goalsScored": 4,
+    "goalsConceded": 13,
+    "cleanSheets": 2,
+    "homeWins": 0,
+    "homeGames": 4,
+    "awayWins": 1,
+    "awayGames": 3,
+    "lastFive": [
+      "L",
+      "L",
+      "L",
+      "W",
+      "L"
+    ],
+    "matchdayGoals": [
+      {
+        "matchday": 2,
+        "scored": 0,
+        "conceded": 0
+      },
+      {
+        "matchday": 1,
+        "scored": 0,
+        "conceded": 1
+      },
+      {
+        "matchday": 3,
+        "scored": 1,
+        "conceded": 3
+      },
+      {
+        "matchday": 4,
+        "scored": 0,
+        "conceded": 5
+      },
+      {
+        "matchday": 5,
+        "scored": 0,
+        "conceded": 1
+      },
+      {
+        "matchday": 6,
+        "scored": 1,
+        "conceded": 0
+      },
+      {
+        "matchday": 7,
+        "scored": 2,
+        "conceded": 3
+      }
+    ],
+    "recentMatches": [
+      {
+        "opponent": "Celta",
+        "opponentId": 558,
+        "gf": 0,
+        "ga": 0,
+        "isHome": true,
+        "utcDate": "2026-08-22T17:30:00Z"
+      },
+      {
+        "opponent": "Real Betis",
+        "opponentId": 90,
+        "gf": 0,
+        "ga": 1,
+        "isHome": true,
+        "utcDate": "2026-08-25T19:00:00Z"
+      },
+      {
+        "opponent": "Deportivo",
+        "opponentId": 560,
+        "gf": 1,
+        "ga": 3,
+        "isHome": false,
+        "utcDate": "2026-08-30T17:30:00Z"
+      },
+      {
+        "opponent": "Barça",
+        "opponentId": 81,
+        "gf": 0,
+        "ga": 5,
+        "isHome": true,
+        "utcDate": "2026-09-06T14:15:00Z"
+      },
+      {
+        "opponent": "Sevilla FC",
+        "opponentId": 559,
+        "gf": 0,
+        "ga": 1,
+        "isHome": false,
+        "utcDate": "2026-09-11T19:00:00Z"
+      },
+      {
+        "opponent": "Alavés",
+        "opponentId": 263,
+        "gf": 1,
+        "ga": 0,
+        "isHome": false,
+        "utcDate": "2026-09-15T18:00:00Z"
+      },
+      {
+        "opponent": "Real Sociedad",
+        "opponentId": 92,
+        "gf": 2,
+        "ga": 3,
+        "isHome": true,
+        "utcDate": "2026-09-20T19:00:00Z"
+      }
+    ],
+    "goalsPerGame": 0.57,
+    "concededPerGame": 1.86,
+    "cleanSheetRate": 0.29,
+    "homeAdvantageDifferential": -33
+  }
+}

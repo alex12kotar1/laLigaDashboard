@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Liga Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Column 1: Left (Welcome + Upcoming Matches) -->
+        <div class="left-column">
+            <div class="welcome-section">
+                <h1>Welcome!</h1>
+                <hr class="welcome-divider">
+                <svg class="laliga-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 381 250">
+                  <defs>
+                    <style>.cls-1{fill:#ff4b44}</style>
+                  </defs>
+                  <g>
+                    <path class="cls-1" d="M152.25 172.76c0-6 2.4-12.48 6.72-18.72L267.18 0h62.63L208.4 172.76h54.71l-84.94 43.19-18.24-23.27c-5.04-6.48-7.68-12.96-7.68-19.92M104.02 84.94L162.8 0h56.87l-73.18 104.14H194l-73.9 37.67-14.88-18.96c-5.28-6.96-7.68-12.24-7.68-19.44 0-6.48 2.4-12.72 6.48-18.48Z"/>
+                  </g>
+                </svg>
+                <h2>Interactive La Liga dashboard</h2>
+            </div>
+            
+            <div class="matches-section">
+                <h2>Upcoming Matches:</h2>
+                <div id="upcoming-feed" class="matches-feed"></div>
+            </div>
+        </div>
+
+        <!-- Column 2: Standings Table -->
+        <div class="right-column">
+            <div class="table-header">
+                <h2>Current Table:</h2>
+                <p>Click on a team to see advanced stats</p>
+            </div>
+            
+            <div class="table-labels">
+                <span class="label-team">TEAM</span>
+                <div class="label-stats">
+                    <span>GF</span>
+                    <span>GD</span>
+                    <span>PTS</span>
+                    <span>GP</span>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <div id="standings-table" class="standings-table"></div>
+                
+                <div class="side-labels">
+                    <div class="ucl-label-container">
+                        <div class="ucl-bar"></div>
+                        <span class="label-text">UCL<br><small>Qualification</small></span>
+                    </div>
+                    <div class="relegation-label-container">
+                        <div class="rel-bar"></div>
+                        <span class="label-text">RELEGATION</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Column 3: Stacked Feeds (Recent Results + Top Scorers) -->
+        <div class="recent-column">
+            <div class="matches-section">
+                <h2>Recent Results:</h2>
+                <div id="recent-feed" class="matches-feed"></div>
+            </div>
+
+            <div class="matches-section">
+                <h2>Top Scorers:</h2>
+                <div id="scorers-feed" class="matches-feed"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
