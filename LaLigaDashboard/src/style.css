@@ -1,3 +1,4 @@
+/* base */
 :root {
     --bg-color: #1a1a1a;
     --text-white: #ffffff;
@@ -23,7 +24,7 @@ body {
     min-height: 100vh;
 }
 
-/* 3-Column Grid Container */
+/* set up 3 column grid */
 .dashboard-container {
     display: grid;
     grid-template-columns: 420px 630px 450px;
@@ -31,7 +32,7 @@ body {
     background-color: #121212;
 }
 
-/* --- Left Column --- */
+/* left column */
 .left-column {
     display: flex;
     flex-direction: column;
@@ -39,6 +40,7 @@ body {
     border-right: 1px solid #333; 
 }
 
+/* welcome text */
 .welcome-section {
     text-align: center;
     margin-bottom: 60px;
@@ -52,6 +54,7 @@ body {
 .matches-section h2 { font-size: 1.8rem; margin-bottom: 15px; font-weight: 800; }
 .matches-feed { display: flex; flex-direction: column; gap: 4px; }
 
+/* upcoming matches */
 .match-row {
     height: 38px;
     display: flex;
@@ -66,7 +69,7 @@ body {
 .match-row:nth-child(even) { background-color: var(--row-dark-grey); }
 
 
-/* --- Middle Column (Table) --- */
+/* live table */
 .right-column {
     padding: 30px;
     display: flex;
@@ -148,6 +151,7 @@ body {
     gap: 8px;
 }
 
+/* logos in table */
 .team-crest {
     width: 18px;
     height: 18px;
@@ -172,7 +176,7 @@ body {
     font-weight: 900;
 }
 
-/* --- Right Column (Recent Results) --- */
+/* right side - recent games */
 .recent-column {
     padding: 40px 30px;
     display: flex;
@@ -195,13 +199,13 @@ body {
     background-color: #2a2a2a;
 }
 
-/* Color Coding */
+/* color coding - top 4 UCL, bottom 3 relegation */
 .table-row.ucl .team-info { background-color: var(--ucl-teal); }
 .table-row.mid:nth-child(odd) .team-info { background-color: var(--row-dark-grey); }
 .table-row.mid:nth-child(even) .team-info { background-color: var(--row-light-grey); }
 .table-row.rel .team-info { background-color: var(--rel-red); }
 
-/* --- Side Identifiers --- */
+/* add the labels with correct color */
 .side-labels { position: relative; width: 100px; margin-left: 10px; }
 .ucl-label-container { position: absolute; top: 0; display: flex; align-items: center; }
 .ucl-bar { width: 4px; height: 118px; background-color: var(--ucl-teal); margin-right: 10px; }
