@@ -145,7 +145,7 @@ function renderScorers(scorersArray) {
 
     container.innerHTML = '';
 
-    // backup incase free tier dosent support
+    // backup incase free tier dosent support - tested and WORKS
     if (!scorersArray || !Array.isArray(scorersArray) || scorersArray.length === 0) {
         container.innerHTML = '<div class="match-row"><span>No scorer data available</span></div>';
         return;
@@ -166,7 +166,7 @@ function renderScorers(scorersArray) {
             displayName = `${item.player.firstName.charAt(0)}. ${item.player.lastName}`;
         }
 
-        // Prefer short team identifier (e.g. "BAR", "RMA", "ATM")
+        // check for shorter name ("BAR", "RMA", "ATM")
         const teamCode = item.team.tla || item.team.shortName || item.team.name;
         const goals = item.goals ?? 0;
 
