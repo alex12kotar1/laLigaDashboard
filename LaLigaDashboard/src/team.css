@@ -47,7 +47,7 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Fixed Top Section: Identity & Next Match */
+/* top summary - left */
 .top-summary-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -94,6 +94,7 @@ body {
     font-weight: 900;
 }
 
+/* team logo */
 .badge-qualifier {
     display: inline-block;
     margin-top: 6px;
@@ -105,7 +106,7 @@ body {
     border-radius: 3px;
 }
 
-/* Tab Bar Navigation System */
+/* tabs for different statistics*/
 .tabs-navigation {
     display: flex;
     flex-wrap: wrap;
@@ -135,7 +136,7 @@ body {
     color: #ffffff;
 }
 
-/* Dynamic Content Area below Tab Bar */
+/* specified content below tab */
 .tab-content-area {
     flex-grow: 1;
     padding: 30px 40px;
