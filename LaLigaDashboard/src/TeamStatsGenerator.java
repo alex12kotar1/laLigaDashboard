@@ -15,6 +15,7 @@ public class TeamStatsGenerator {
         generate();
     }
 
+    // generates team stats: 
     public static void generate() {
         try (FileReader reader = new FileReader("src/results.json")) {
             JsonObject root = JsonParser.parseReader(reader).getAsJsonObject();
@@ -22,7 +23,7 @@ public class TeamStatsGenerator {
 
             Map<Integer, JsonObject> teamStatsMap = new HashMap<>();
 
-            // 1. Process matches to calculate team stats
+            // go through completed matches
             for (JsonElement elem : matches) {
                 JsonObject match = elem.getAsJsonObject();
                 if (!"FINISHED".equals(match.get("status").getAsString())) {
@@ -43,15 +44,15 @@ public class TeamStatsGenerator {
                 initTeam(teamStatsMap, homeId, homeTeam);
                 initTeam(teamStatsMap, awayId, awayTeam);
 
-                // Update Home Team Stats
+                // update home team statistics
                 updateTeamMatch(teamStatsMap.get(homeId), homeGoals, awayGoals, true,
                         matchday, awayTeam, match);
-                // Update Away Team Stats
+                // update away team statistics
                 updateTeamMatch(teamStatsMap.get(awayId), awayGoals, homeGoals, false,
                         matchday, homeTeam, match);
             }
 
-            // 2. Compute final averages and formatted structures
+            // algorithim for match ratings - work in progress
             JsonObject finalOutput = new JsonObject();
             for (Map.Entry<Integer, JsonObject> entry : teamStatsMap.entrySet()) {
                 JsonObject stats = entry.getValue();
@@ -70,7 +71,7 @@ public class TeamStatsGenerator {
                     stats.addProperty("cleanSheetRate",
                             Math.round(csRate * 100.0) / 100.0);
 
-                    // Home Advantage calculation
+                    // home Advantage calculation - work in progress
                     int homeWins = stats.get("homeWins").getAsInt();
                     int homeGames = stats.get("homeGames").getAsInt();
                     int awayWins = stats.get("awayWins").getAsInt();
@@ -89,7 +90,7 @@ public class TeamStatsGenerator {
                 finalOutput.add(String.valueOf(entry.getKey()), stats);
             }
 
-            // Write to team_stats.json
+            // write to team_stats.json
             try (FileWriter writer = new FileWriter("src/team_stats.json")) {
                 new GsonBuilder().setPrettyPrinting().create().toJson(finalOutput,
                         writer);
@@ -103,6 +104,7 @@ public class TeamStatsGenerator {
 
     private static void initTeam(Map<Integer, JsonObject> map, int teamId,
             JsonObject teamObj) {
+        // if the team isnt there, add its info
         if (!map.containsKey(teamId)) {
             JsonObject stats = new JsonObject();
             stats.addProperty("id", teamId);
@@ -152,21 +154,21 @@ public class TeamStatsGenerator {
             }
         }
 
-        // Maintain last 5
+        // last 5 games
         JsonArray lastFive = stats.getAsJsonArray("lastFive");
         if (lastFive.size() == 5) {
             lastFive.remove(0);
         }
         lastFive.add(result);
 
-        // Track goals by matchday
+        // goals by specific matchday
         JsonObject mdStat = new JsonObject();
         mdStat.addProperty("matchday", matchday);
         mdStat.addProperty("scored", gf);
         mdStat.addProperty("conceded", ga);
         stats.getAsJsonArray("matchdayGoals").add(mdStat);
 
-        // Store recent match details for H2H/Recent results
+        // store recent match details for H2H/recent results
         JsonObject matchDetails = new JsonObject();
         matchDetails.addProperty("opponent",
                 opponent.has("shortName") ? opponent.get("shortName").getAsString()
