@@ -117,31 +117,118 @@ function normalizeMatches(team) {
     return list;
 }
 
-function renderHeader(data) {
-    const titleEl = document.getElementById('team-title');
-    const crestEl = document.getElementById('team-crest');
-    const rankEl = document.getElementById('team-rank');
+function renderHeader(data, rank) {
+    setText('team-title', data.name || 'Unknown Team');
+    const crest = document.getElementById('team-crest');
+    if (crest && data.crest) crest.src = data.crest;
+    if (rank) setText('team-rank', `${ordinal(rank)} place`);
 
-    if (titleEl) titleEl.innerText = data.name || "Unknown Team";
-    if (crestEl && data.crest) crestEl.src = data.crest;
-    if (rankEl && data.rank) rankEl.innerText = `${data.rank} place`;
+    // Qualifier badge: UCL top 4, relegation bottom 3, otherwise nothing
+    const badge = document.querySelector('.badge-qualifier');
+    if (badge && rank) {
+        if (rank <= 4) {
+            badge.innerText = 'UCL QUALIFIER';
+        } else if (rank >= 18) {
+            badge.innerText = 'RELEGATION ZONE';
+            badge.style.backgroundColor = '#d39f9f';
+        } else {
+            badge.style.display = 'none';
+        }
+    }
 }
 
-// Attach switchTab to global window scope so HTML onclick handlers work
-window.switchTab = function(tabId) {
-    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+// Fills NEXT MATCH line from matches.json.
 
-    if (window.event && window.event.currentTarget) {
-        window.event.currentTarget.classList.add('active');
+function renderNextMatch(teamId, scheduled) {
+    const el = document.getElementById('next-match') ||
+        [...document.querySelectorAll('.summary-panel.right *')]
+            .find(n => n.children.length === 0 && /^(vs\.|@)/i.test(n.textContent.trim()));
+    if (!el) {
+        console.warn('Next match element not found; add id="next-match" in team.html');
+        return;
     }
 
-    const targetPanel = document.getElementById(`panel-${tabId}`);
-    if (targetPanel) {
-        targetPanel.classList.add('active');
+    const next = scheduled
+        .filter(m => m.homeTeam.id === teamId || m.awayTeam.id === teamId)
+        .filter(m => !['POSTPONED', 'CANCELLED', 'SUSPENDED'].includes(m.status))
+        .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate))[0];
+    if (!next) { el.innerText = 'NO UPCOMING MATCH'; return; }
+
+    const home = next.homeTeam.id === teamId;
+    const opp = home ? next.awayTeam : next.homeTeam;
+    const d = new Date(next.utcDate);
+    const date = d.toLocaleDateString(undefined, { month: 'numeric', day: 'numeric' });
+    const time = d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+    el.innerText = `${home ? 'vs.' : '@'} ${(opp.shortName || opp.name).toUpperCase()} ${date} ${time}`;
+}
+
+// last 5 results for each team
+function renderLastFive(matches) {
+    const label = document.getElementById('last-five-label') ||
+        [...document.querySelectorAll('.summary-panel.right *')]
+            .find(n => n.children.length === 0 && /^H2H\s*LAST\s*5/i.test(n.textContent.trim()));
+    if (!label) {
+        console.warn('Last 5 label not found; add id="last-five-label" in team.html');
+        return;
     }
+    label.innerText = 'LAST 5 RESULTS';
+
+    let box = document.getElementById('last-five');
+    if (!box) {
+        box = document.createElement('div');
+        box.id = 'last-five';
+        label.insertAdjacentElement('afterend', box);
+    }
+    box.innerHTML = '';
+    box.style.cssText = 'display:flex; gap:12px; margin-top:14px;';
+
+    const colors = { W: '#8cd3c1', D: '#8c8c8c', L: '#d39f9f' };
+    const last5 = matches.slice(-5).reverse();   // most recent first
+
+    if (!last5.length) {
+        box.innerText = 'No matches played yet';
+        return;
+    }
+
+    last5.forEach(m => {
+        const item = document.createElement('div');
+        item.style.cssText = 'display:flex; flex-direction:column; align-items:center; gap:6px; width:74px;';
+        item.title = `MD ${m.matchday}: ${m.isHome ? 'vs' : '@'} ${m.opponent} ${m.gf}-${m.ga}`;
+
+        const pill = document.createElement('div');
+        pill.innerText = m.result;
+        pill.style.cssText = `width:40px; height:40px; border-radius:6px; display:flex; ` +
+            `align-items:center; justify-content:center; font-weight:900; font-size:1.1rem; ` +
+            `color:#000; background:${colors[m.result]};`;
+
+        const info = document.createElement('div');
+        info.innerText = `${m.isHome ? 'vs' : '@'} ${m.opponent}`;
+        info.style.cssText = 'font-size:0.65rem; font-weight:700; color:#8c8c8c; text-align:center; ' +
+            'line-height:1.2; max-width:74px;';
+
+        const score = document.createElement('div');
+        score.innerText = `${m.gf} - ${m.ga}`;
+        score.style.cssText = 'font-size:0.8rem; font-weight:900;';
+
+        item.append(pill, info, score);
+        box.appendChild(item);
+    });
+}
+// Make tabs switchable
+window.switchTab = function (tabId) {
+    document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+
+    const btn = [...document.querySelectorAll('.tab-button')]
+        .find(b => (b.getAttribute('onclick') || '').includes(`'${tabId}'`));
+    if (btn) btn.classList.add('active');
+
+    const panel = document.getElementById(`panel-${tabId}`);
+    if (panel) panel.classList.add('active');
+
+    // resize charts once visible
+    Object.values(activeCharts).forEach(c => c.resize());
 };
-
 /* ==================== ALGORITHMS & CHARTS ==================== */
 
 // 1. RECENT FORM: Rating algorithm (0-100) based on GD & Possession
