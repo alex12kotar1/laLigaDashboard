@@ -21,3 +21,5 @@ For each goal scored, GD goes up by one. For each goal conceded, GD goes down by
 
 # Notes
 Keep in mind the free tier of football-data.org API limits to 10 requests per minute. You will not go over this limit as long as you don't try to host the site using Main.java more than once per minute.
+
+Possession view and top players per team is in progress - searching for a different API for these stats 
