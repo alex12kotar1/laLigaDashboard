@@ -398,7 +398,8 @@ function initRollingGoalsChart(matches, accent) {
         options: getCommonOptions(null, 0)
     });
 }
-function getCommonOptions(maxY = null) {
+// Formatting for graphs
+function getCommonOptions(maxY = null, minY = null) {
     return {
         responsive: true,
         maintainAspectRatio: false,
@@ -407,7 +408,7 @@ function getCommonOptions(maxY = null) {
         },
         scales: {
             x: { ticks: { color: '#8c8c8c' }, grid: { color: '#333333' } },
-            y: { max: maxY, ticks: { color: '#8c8c8c' }, grid: { color: '#333333' } }
+            y: { min: minY, max: maxY, ticks: { color: '#8c8c8c' }, grid: { color: '#333333' } }
         }
     };
 }
