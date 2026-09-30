@@ -231,59 +231,107 @@ window.switchTab = function (tabId) {
 };
 /* ==================== ALGORITHMS & CHARTS ==================== */
 
-// 1. RECENT FORM: Rating algorithm (0-100) based on GD & Possession
-function initFormChart(recentMatches, accentColor) {
-    const ctx = document.getElementById('formChart')?.getContext('2d');
-    if (!ctx || !recentMatches.length) return;
-    if (activeCharts.form) activeCharts.form.destroy();
+// Rolling form - 
+// Single-match rating, 0-100.
+// Result is base (WDL), goal difference pushes slightly, opponent strength by table position
+// rewards good results against strong teams, and away games get a smaller bonus.
+function matchRating(m, oppRank) {
+    let r = m.result === 'W' ? 70 : m.result === 'D' ? 42 : 15;
+    r += Math.max(-10, Math.min((m.gf - m.ga) * 5, 15));
+    if (oppRank) {
+        const strength = (20 - oppRank) / 19;   // 1 = top of table, 0 = bottom
+        r += (strength - 0.5) * 16;
+    }
+    if (!m.isHome) r += 3;
+    return Math.max(0, Math.min(100, Math.round(r)));
+}
 
-    const last5 = recentMatches.slice(-5);
-    const labels = last5.map(m => `MD ${m.matchday}`);
-    
-    const ratings = last5.map(m => {
-        const gd = (m.goalsFor || 0) - (m.goalsAgainst || 0);
-        const pos = m.possession || 50;
-        let base = m.result === 'W' ? 60 : m.result === 'D' ? 40 : 20;
-        return Math.min(Math.max(Math.round(base + (gd * 8) + ((pos - 50) * 0.4)), 10), 100);
-    });
-
-    activeCharts.form = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: labels,
-            datasets: [{
-                label: 'Performance Rating',
-                data: ratings,
-                borderColor: accentColor,
-                backgroundColor: accentColor + '22',
-                borderWidth: 3,
-                fill: true,
-                tension: 0.35,
-                pointBackgroundColor: '#ffffff',
-                pointBorderColor: accentColor,
-                pointRadius: 6
-            }]
-        },
-        options: getCommonOptions(100)
+// Rolling average algorithim
+// 
+function rollingAvg(values, win = ROLLING_WINDOW) {
+    return values.map((_, i) => {
+        const slice = values.slice(Math.max(0, i - win + 1), i + 1);
+        return +(slice.reduce((a, b) => a + b, 0) / slice.length).toFixed(1);
     });
 }
 
-// 2. HOME FIELD ADVANTAGE: Compare Home Win % vs Away Win %
-function initHomeChart(records, accentColor) {
+function initFormChart(matches, rankById, accent) {
+    const ctx = document.getElementById('formChart')?.getContext('2d');
+    if (!ctx || !matches.length) return;
+    activeCharts.form?.destroy();
+
+    const labels = matches.map(m => `MD ${m.matchday}`);
+    const single = matches.map(m => matchRating(m, rankById[m.opponentId]));
+    const rolling = rollingAvg(single);
+    const resultColors = matches.map(m =>
+        m.result === 'W' ? '#8cd3c1' : m.result === 'D' ? '#8c8c8c' : '#d39f9f');
+
+    const describe = i => {
+        const m = matches[i];
+        return `${m.result} ${m.isHome ? 'vs' : '@'} ${m.opponent} (${m.gf}-${m.ga})`;
+    };
+
+    const opts = getCommonOptions(100, 0);
+    opts.plugins.tooltip = {
+        callbacks: {
+            afterTitle: items => describe(items[0].dataIndex)
+        }
+    };
+
+    activeCharts.form = new Chart(ctx, {
+        data: {
+            labels,
+            datasets: [
+                {
+                    type: 'line',
+                    label: `Rolling form (${ROLLING_WINDOW}-match avg)`,
+                    data: rolling,
+                    borderColor: accent,
+                    backgroundColor: accent + '22',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.35,
+                    pointBackgroundColor: '#ffffff',
+                    pointBorderColor: accent,
+                    pointRadius: 5,
+                    order: 1
+                },
+                {
+                    type: 'bar',
+                    label: 'Match rating',
+                    data: single,
+                    backgroundColor: resultColors.map(c => c + '99'),
+                    borderRadius: 3,
+                    order: 2
+                }
+            ]
+        },
+        options: opts
+    });
+}
+
+// Other charts
+
+// Home field advantage chart
+
+function initHomeChart(team, accent) {
     const ctx = document.getElementById('homeChart')?.getContext('2d');
     if (!ctx) return;
-    if (activeCharts.home) activeCharts.home.destroy();
+    activeCharts.home?.destroy();
 
-    const homeWinPct = records.homeGames ? Math.round((records.homeWins / records.homeGames) * 100) : 0;
-    const awayWinPct = records.awayGames ? Math.round((records.awayWins / records.awayGames) * 100) : 0;
+    // Generator stores these at top level; fall back to an optional nested object
+    const r = team.homeAwayRecords || team;
+    const pct = (w, g) => (g ? Math.round((w / g) * 100) : 0);
+    const homePct = pct(r.homeWins, r.homeGames);
+    const awayPct = pct(r.awayWins, r.awayGames);
 
     activeCharts.home = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: ['Home Win %', 'Away Win %'],
             datasets: [{
-                data: [homeWinPct, awayWinPct],
-                backgroundColor: [accentColor, '#444444'],
+                data: [homePct, awayPct],
+                backgroundColor: [accent, '#444444'],
                 borderRadius: 4,
                 barThickness: 60
             }]
@@ -294,73 +342,62 @@ function initHomeChart(records, accentColor) {
             plugins: { legend: { display: false } },
             scales: {
                 x: { ticks: { color: '#ffffff', font: { family: 'Montserrat', weight: '700' } }, grid: { display: false } },
-                y: { max: 100, ticks: { color: '#8c8c8c' }, grid: { color: '#333333' } }
+                y: { min: 0, max: 100, ticks: { color: '#8c8c8c' }, grid: { color: '#333333' } }
             }
         }
     });
 }
 
-// 3. GOALS SCORED / AGAINST: Working Matchday Bar Chart
-function initGoalsChart(matchdayGoals, accentColor) {
+function initGoalsChart(matchdayGoals, accent) {
     const ctx = document.getElementById('goalsChart')?.getContext('2d');
     if (!ctx || !matchdayGoals.length) return;
-    if (activeCharts.goals) activeCharts.goals.destroy();
+    activeCharts.goals?.destroy();
 
-    const sortedGoals = [...matchdayGoals].sort((a, b) => a.matchday - b.matchday);
-
+    const sorted = [...matchdayGoals].sort((a, b) => a.matchday - b.matchday);
     activeCharts.goals = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: sortedGoals.map(m => `MD ${m.matchday}`),
+            labels: sorted.map(m => `MD ${m.matchday}`),
+            datasets: [
+                { label: 'Scored', data: sorted.map(m => m.scored), backgroundColor: accent, borderRadius: 3 },
+                { label: 'Conceded', data: sorted.map(m => m.conceded), backgroundColor: '#8c8c8c', borderRadius: 3 }
+            ]
+        },
+        options: getCommonOptions(null, 0)
+    });
+}
+
+// Temp chart for goals in replace for possesion - searching for new API with possesion stats
+function initRollingGoalsChart(matches, accent) {
+    const ctx = document.getElementById('possessionChart')?.getContext('2d');
+    if (!ctx || !matches.length) return;
+    activeCharts.rolling?.destroy();
+
+    const labels = matches.map(m => `MD ${m.matchday}`);
+    activeCharts.rolling = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels,
             datasets: [
                 {
-                    label: 'Scored',
-                    data: sortedGoals.map(m => m.scored),
-                    backgroundColor: accentColor,
-                    borderRadius: 3
+                    label: `Goals scored (${ROLLING_WINDOW}-match avg)`,
+                    data: rollingAvg(matches.map(m => m.gf)),
+                    borderColor: accent,
+                    backgroundColor: accent + '33',
+                    borderWidth: 3, fill: true, tension: 0.3, pointRadius: 4
                 },
                 {
-                    label: 'Conceded',
-                    data: sortedGoals.map(m => m.conceded),
-                    backgroundColor: '#8c8c8c',
-                    borderRadius: 3
+                    label: `Goals conceded (${ROLLING_WINDOW}-match avg)`,
+                    data: rollingAvg(matches.map(m => m.ga)),
+                    borderColor: '#8c8c8c',
+                    backgroundColor: '#8c8c8c22',
+                    borderWidth: 3, fill: true, tension: 0.3, pointRadius: 4
                 }
             ]
         },
-        options: getCommonOptions()
+        options: getCommonOptions(null, 0)
     });
 }
-
-// 4. POSSESSION: Last 5 Matchdays Line Chart
-function initPossessionChart(recentMatches, accentColor) {
-    const ctx = document.getElementById('possessionChart')?.getContext('2d');
-    if (!ctx || !recentMatches.length) return;
-    if (activeCharts.possession) activeCharts.possession.destroy();
-
-    const last5 = recentMatches.slice(-5);
-    const labels = last5.map(m => `MD ${m.matchday}`);
-    const possessionData = last5.map(m => m.possession ?? 50);
-
-    activeCharts.possession = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: labels,
-            datasets: [{
-                label: 'Possession %',
-                data: possessionData,
-                borderColor: accentColor,
-                backgroundColor: accentColor + '33',
-                borderWidth: 3,
-                fill: true,
-                tension: 0.25,
-                pointBackgroundColor: accentColor,
-                pointRadius: 5
-            }]
-        },
-        options: getCommonOptions(100)
-    });
-}
-
 function getCommonOptions(maxY = null) {
     return {
         responsive: true,
