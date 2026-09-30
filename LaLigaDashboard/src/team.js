@@ -22,59 +22,100 @@ const TEAM_ACCENT_COLORS = {
     559: '#e4002b'   // Sevilla
 };
 
+const ROLLING_WINDOW = 5;
 const activeCharts = {};
 
-document.addEventListener("DOMContentLoaded", async () => {
-    // 1. Grab ID from URL (?id=81)
-    const urlParams = new URLSearchParams(window.location.search);
-    const teamIdParam = urlParams.get('id') || '81';
-    const teamIdNum = parseInt(teamIdParam, 10);
+document.addEventListener('DOMContentLoaded', async () => {
+    const params = new URLSearchParams(window.location.search);
+    const teamId = parseInt(params.get('id') || '81', 10);
 
-    // 2. Set dynamic accent color
-    const teamAccent = TEAM_ACCENT_COLORS[teamIdNum] || TEAM_ACCENT_COLORS[teamIdParam] || '#a50044';
-    document.documentElement.style.setProperty('--team-accent', teamAccent);
+    const accent = TEAM_ACCENT_COLORS[teamId] || '#ff4b44';
+    document.documentElement.style.setProperty('--team-accent', accent);
+
+    const [allStats, standings, upcoming] = await Promise.all([
+        loadJson('team_stats.json'),
+        loadJson('standings.json'),
+        loadJson('matches.json')
+    ]);
+
+    if (!allStats) {
+        setText('team-title', 'Data File Not Found');
+        return;
+    }
+
+    const teamData = allStats[teamId] || allStats[String(teamId)] || allStats.teams?.[teamId];
+    if (!teamData) {
+        setText('team-title', 'Team Not Found');
+        return;
+    }
+
+    // Standings lookup: teamId -> position
+    const table = standings?.standings?.[0]?.table || [];
+    const rankById = {};
+    table.forEach(row => { rankById[row.team.id] = row.position; });
+    const myRank = rankById[teamId] || null;
+
+    const matches = normalizeMatches(teamData);
+
+    renderHeader(teamData, myRank);
+    renderNextMatch(teamId, upcoming?.matches || []);
+    renderLastFive(matches);
 
     try {
-        // 3. Robust Fetch (Tries local path first, falls back to root if nested)
-        let res = await fetch('team_stats.json');
-        if (!res.ok) {
-            res = await fetch('./team_stats.json');
-        }
-        if (!res.ok) {
-            res = await fetch('/team_stats.json');
-        }
-
-        if (!res.ok) {
-            console.error(`Failed to fetch team_stats.json. Status: ${res.status}`);
-            document.getElementById('team-title').innerText = "Data File Not Found";
-            return;
-        }
-
-        const allStats = await res.json();
-        console.log("Loaded team_stats.json:", allStats);
-
-        // Match string key "81", integer key 81, or nested .teams wrapper
-        const teamData = allStats[teamIdParam] || allStats[teamIdNum] || allStats.teams?.[teamIdParam] || allStats.teams?.[teamIdNum];
-
-        if (!teamData) {
-            console.error(`Team ID ${teamIdParam} not found in team_stats.json`);
-            document.getElementById('team-title').innerText = "Team Not Found";
-            return;
-        }
-
-        // 4. Update Header DOM Elements
-        renderHeader(teamData);
-
-        // 5. Initialize Charts
-        initFormChart(teamData.recentMatches || [], teamAccent);
-        initHomeChart(teamData.homeAwayRecords || {}, teamAccent);
-        initGoalsChart(teamData.matchdayGoals || [], teamAccent);
-        initPossessionChart(teamData.recentMatches || [], teamAccent);
-
+        initFormChart(matches, rankById, accent);
+        initHomeChart(teamData, accent);
+        initGoalsChart(teamData.matchdayGoals || [], accent);
+        initRollingGoalsChart(matches, accent);
     } catch (e) {
-        console.error("Error executing team.js script:", e);
+        console.error('Chart init failed:', e);
     }
 });
+
+/* ==================== HELPERS ==================== */
+
+async function loadJson(name) {
+    for (const path of [name, './' + name, '/' + name]) {
+        try {
+            const res = await fetch(path);
+            if (res.ok) return await res.json();
+        } catch (e) { /* try next path */ }
+    }
+    console.error(`Could not load ${name}`);
+    return null;
+}
+
+function setText(id, text) {
+    const el = document.getElementById(id);
+    if (el) el.innerText = text;
+}
+
+function ordinal(n) {
+    const s = ['th', 'st', 'nd', 'rd'];
+    const v = n % 100;
+    return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
+
+// Converts the generator's recentMatches into list
+function normalizeMatches(team) {
+    const md = team.matchdayGoals || [];
+    const list = (team.recentMatches || []).map((m, i) => {
+        const gf = m.gf ?? m.goalsFor ?? 0;
+        const ga = m.ga ?? m.goalsAgainst ?? 0;
+        return {
+            matchday: m.matchday ?? md[i]?.matchday ?? i + 1,
+            opponent: m.opponent || 'Opponent',
+            opponentId: m.opponentId,
+            gf, ga,
+            isHome: !!m.isHome,
+            utcDate: m.utcDate,
+            result: m.result || (gf > ga ? 'W' : gf === ga ? 'D' : 'L')
+        };
+    });
+    list.sort((a, b) => (a.utcDate && b.utcDate)
+        ? new Date(a.utcDate) - new Date(b.utcDate)
+        : a.matchday - b.matchday);
+    return list;
+}
 
 function renderHeader(data) {
     const titleEl = document.getElementById('team-title');
