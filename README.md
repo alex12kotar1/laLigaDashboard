@@ -17,4 +17,4 @@ These results are then smoothed to an average, you can see their current / past 
 
 Goal Differential is self explanatory:
 For each goal scored, GD goes up by one. For each goal conceded, GD goes down by one. For instance, a 3-1 result means a +2GD, with 3 goals for and 1 goal against.
-<img width="1496" height="900" alt="Screenshot 2026-09-30 183739" src="https://github.com/user-attachments/assets/d83294ab-9729-4a35-8165-997c1bc05110" />
+<img width="1492" height="901" alt="Screenshot 2026-09-30 184101" src="https://github.com/user-attachments/assets/a2ce000b-4603-4f5a-9074-6d1f3763bf0c" />
