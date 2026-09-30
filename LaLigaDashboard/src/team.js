@@ -7,7 +7,7 @@ const TEAM_ACCENT_COLORS = {
     80: '#007fc8',   // Espanyol
     81: '#a50044',   // FC Barcelona
     82: '#005999',   // Getafe
-    86: '#3a5fcd',   // Real Madrid (navy is too dark on a dark bg)
+    86: '#3a5fcd',   // Real Madrid 
     87: '#e5321b',   // Rayo Vallecano
     88: '#1e5bb5',   // Levante
     89: '#c8102e',   // Mallorca
