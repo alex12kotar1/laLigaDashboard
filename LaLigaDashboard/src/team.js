@@ -1,11 +1,25 @@
-// La Liga Team Primary Accent Colors
+// Team accent colors by football-data ID
+
 const TEAM_ACCENT_COLORS = {
-    81: '#a50044',  // FC Barcelona
-    86: '#00205b',  // Real Madrid
-    77: '#00954c',  // Real Betis / Athletic
-    78: '#cb3524',  // Atlético Madrid
-    90: '#005ca5',  // Real Sociedad
-    95: '#d00027'   // Valencia CF
+    77: '#a90028',   // Athletic Club
+    78: '#cb3524',   // Atlético Madrid
+    79: '#d91a21',   // Osasuna
+    80: '#007fc8',   // Espanyol
+    81: '#a50044',   // FC Barcelona
+    82: '#005999',   // Getafe
+    86: '#3a5fcd',   // Real Madrid (navy is too dark on a dark bg)
+    87: '#e5321b',   // Rayo Vallecano
+    88: '#1e5bb5',   // Levante
+    89: '#c8102e',   // Mallorca
+    90: '#00954c',   // Real Betis
+    92: '#2a6ebb',   // Real Sociedad
+    94: '#f5c400',   // Villarreal
+    95: '#ee7d00',   // Valencia
+    263: '#2e6fd0',  // Alavés
+    285: '#00a651',  // Elche
+    298: '#d81e2b',  // Girona
+    558: '#6cb4e4',  // Celta
+    559: '#e4002b'   // Sevilla
 };
 
 const activeCharts = {};
