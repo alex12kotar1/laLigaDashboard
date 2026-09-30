@@ -1,6 +1,6 @@
 
 
-# laLigaDashboard
+# LaLigaDashboard
 Functional dashboard for La Liga soccer league, with advanced statistics.
 
 Displays a live table, upcoming matches, recent matches, and top scorers.
@@ -18,3 +18,6 @@ These results are then smoothed to an average, you can see their current / past 
 Goal Differential is self explanatory:
 For each goal scored, GD goes up by one. For each goal conceded, GD goes down by one. For instance, a 3-1 result means a +2GD, with 3 goals for and 1 goal against.
 <img width="1492" height="901" alt="Screenshot 2026-09-30 184101" src="https://github.com/user-attachments/assets/a2ce000b-4603-4f5a-9074-6d1f3763bf0c" />
+
+# Notes
+Keep in mind the free tier of football-data.org API limits to 10 requests per minute. You will not go over this limit as long as you don't try to host the site using Main.java more than once per minute.
