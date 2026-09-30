@@ -12,7 +12,9 @@ Rolling form is calculated by the following:
 70 for a win, 42 for a draw, 15 for a loss as the base points. For the goal differential, each +GD is +5 points (2-0 result means +2 GD, +10 points)
 On top of this, up to 8 points are added based on strength of opponent (current table standings), and away games add +3.
 Strength of opponent is by CURRENT standings, not when they played the game.
-<img width="1496" height="900" alt="Screenshot 2026-09-30 183739" src="https://github.com/user-attachments/assets/d83294ab-9729-4a35-8165-997c1bc05110" />
-
 These results are then smoothed to an average, you can see their current / past form for each recent matchday.
 <img width="1497" height="899" alt="Screenshot 2026-09-30 183815" src="https://github.com/user-attachments/assets/7a24211f-bd6d-451e-be9e-2511934071c9" />
+
+Goal Differential is self explanatory:
+For each goal scored, GD goes up by one. For each goal conceded, GD goes down by one. For instance, a 3-1 result means a +2GD, with 3 goals for and 1 goal against.
+<img width="1496" height="900" alt="Screenshot 2026-09-30 183739" src="https://github.com/user-attachments/assets/d83294ab-9729-4a35-8165-997c1bc05110" />
